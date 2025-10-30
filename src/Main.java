@@ -10,11 +10,14 @@ public class Main {
 
         System.out.println("Morate uzvratiti: ");
         for (double v : novcanice) {
-            if ((iznos / v) >= 1) {
+            if (iznos == 0) {
+                break;
+            } else if ((iznos / v) >= 1) {
                 brojNovcanica = (int) (iznos / v);
                 iznos -= brojNovcanica * v;
                 System.out.println(brojNovcanica + "*" + v);
             }
+
         }
     }
 }
